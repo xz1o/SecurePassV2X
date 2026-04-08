@@ -62,22 +62,32 @@ export default function DisclaimerPage() {
         <Card className="bg-background/50 backdrop-blur-md border-purple-500/20">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <Github className="h-5 w-5 text-purple-400" />🛑 Open Source Soon!
+              <Github className="h-5 w-5 text-purple-400" />
+              Open Source
             </CardTitle>
-            <CardDescription>This project will be open source</CardDescription>
+            <CardDescription>This project is open source</CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent className="space-y-4">
             <p>
-              SecurePassV2X will be open-sourced soon! (DON'T USE THE OPEN SOURCE FOR BAD PURPOSES IN ANY WAY OR U WILL
-              BE FINED OR ARRESTED FOR MAKING PETINTEL PASSWORD STEALER)
+              SecurePassV2X is fully open source! Feel free to explore the code, contribute, or fork it for your own projects.
+            </p>
+            <p className="text-sm text-muted-foreground bg-yellow-500/10 border border-yellow-500/30 rounded-md p-3">
+              <strong>Important:</strong> This project is intended for educational and legitimate security purposes only. 
+              Do not use this code for malicious purposes including but not limited to creating password stealers, 
+              phishing tools, or any unauthorized access tools. Misuse may result in legal consequences.
             </p>
           </CardContent>
-          <CardFooter>
-            <Button variant="outline" disabled className="opacity-50 cursor-not-allowed">
-              <span className="flex items-center gap-2">
-                <Github className="h-4 w-4" />
-                Coming Soon
-              </span>
+          <CardFooter className="flex gap-3">
+            <Button asChild variant="outline" className="border-purple-500/30 hover:bg-purple-500/10">
+              <a href="https://github.com/yourusername/securepassv2x" target="_blank" rel="noopener noreferrer">
+                <Github className="h-4 w-4 mr-2" />
+                View on GitHub
+              </a>
+            </Button>
+            <Button asChild variant="ghost" className="hover:bg-purple-500/10">
+              <a href="https://github.com/yourusername/securepassv2x/fork" target="_blank" rel="noopener noreferrer">
+                Fork Repository
+              </a>
             </Button>
           </CardFooter>
         </Card>
