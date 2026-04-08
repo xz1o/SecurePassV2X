@@ -35,7 +35,6 @@ export function ThemeProvider({
 }: ThemeProviderProps) {
   const [theme, setThemeState] = useState<Theme>(defaultTheme)
   const [resolvedTheme, setResolvedTheme] = useState<'light' | 'dark'>('dark')
-  const [mounted, setMounted] = useState(false)
 
   const getSystemTheme = useCallback((): 'light' | 'dark' => {
     if (typeof window !== 'undefined') {
@@ -67,7 +66,6 @@ export function ThemeProvider({
     const initialTheme = savedTheme || defaultTheme
     setThemeState(initialTheme)
     applyTheme(initialTheme)
-    setMounted(true)
 
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
     const handleChange = () => {
@@ -78,10 +76,6 @@ export function ThemeProvider({
     mediaQuery.addEventListener('change', handleChange)
     return () => mediaQuery.removeEventListener('change', handleChange)
   }, [applyTheme, defaultTheme, theme])
-
-  if (!mounted) {
-    return <div className="dark">{children}</div>
-  }
 
   return (
     <ThemeContext.Provider value={{ theme, resolvedTheme, setTheme }}>
