@@ -79,13 +79,13 @@ export default function DisclaimerPage() {
           </CardContent>
           <CardFooter className="flex gap-3">
             <Button asChild variant="outline" className="border-purple-500/30 hover:bg-purple-500/10">
-              <a href="https://github.com/yourusername/securepassv2x" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/xz1o/SecurePassV2X" target="_blank" rel="noopener noreferrer">
                 <Github className="h-4 w-4 mr-2" />
                 View on GitHub
               </a>
             </Button>
             <Button asChild variant="ghost" className="hover:bg-purple-500/10">
-              <a href="https://github.com/yourusername/securepassv2x/fork" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/xz1o/SecurePassV2X/fork" target="_blank" rel="noopener noreferrer">
                 Fork Repository
               </a>
             </Button>
